@@ -1,0 +1,92 @@
+/* Ejercicio Map */
+
+.Banner__btn {
+    display: flex;
+    height: 30vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+$RedesBtn: ( Whatsapp:$blue2, Facebook:$salmon, Instagram:$gray);
+
+@each $red, $bg in $RedesBtn {
+    .btn-#{$red} {
+        font-size: $h2-l;
+        color: $white;
+        background: $bg;
+        width: 200px;
+        height: 130px;
+        border-radius: 10px;
+        align-self:  center;
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Ejercicio Map GET */
+
+$BtnStyle: (
+    FontSize:$h2-l,
+    color:$white,
+    width:200px,
+    height:130px,
+    borderRadius:10px,
+    alignSelf:center,
+    textAlign: center,
+    display: block,
+    );
+
+.btn__redes__get__whatsapp {
+    font-size: map-get($BtnStyle, FontSize);
+    color: map-get($BtnStyle, color);
+    width: map-get($BtnStyle, width);
+    height: map-get($BtnStyle, height);
+    border-radius: map-get($BtnStyle, borderRadius);
+    align-self: map-get($BtnStyle, alignSelf);
+    text-align: map-get($BtnStyle, textAlign);
+    background: $blue2;
+}
+.btn__redes__get__instagram {
+    font-size: map-get($BtnStyle, FontSize);
+    color: map-get($BtnStyle, color);
+    width: map-get($BtnStyle, width);
+    height: map-get($BtnStyle, height);
+    border-radius: map-get($BtnStyle, borderRadius);
+    align-self: map-get($BtnStyle, alignSelf);
+    text-align: map-get($BtnStyle, textAlign);
+    background: $gray;
+}
+.btn__redes__get__facebook {
+    font-size: map-get($BtnStyle, FontSize);
+    color: map-get($BtnStyle, color);
+    width: map-get($BtnStyle, width);
+    height: map-get($BtnStyle, height);
+    border-radius: map-get($BtnStyle, borderRadius);
+    align-self: map-get($BtnStyle, alignSelf);
+    text-align: map-get($BtnStyle, textAlign);
+    background: $salmon;
+}
+
+/* Ejercicio Extend */
+
+.btn__redes__Whatsapp {
+    font-size: $h2-l;
+    color: $white;
+    background: $blue2;
+    width: 200px;
+    height: 130px;
+    border-radius: 10px;
+    align-self:  center;
+    text-align: center;
+    display: block;
+}
+
+.btn__redes__Instagram {
+    @extend .btn__redes__Whatsapp;
+    background: $gray;
+}
+
+.btn__redes__Facebook {
+    @extend .btn__redes__Whatsapp;
+    background: $salmon;
+}

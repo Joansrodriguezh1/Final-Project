@@ -1,0 +1,105 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    clip-path: circle(110px at calc(100% - 45px) 10px);
+    transition: all 0.8s ease-in-out;
+
+    li {
+        display: block;
+        position: relative;
+    }
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        li {
+            margin: 30px 0;
+            font-family: $font-title;
+            font-size: $h2-l;
+            color: $white;
+            a {
+                color: $white;
+                text-decoration: none;
+                font-family: $font-title;
+                font-size: $h2-l;
+                font-weight: 500;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: "" ;
+                    width: $Spacing-l;
+                    height: $Spacing-l;
+                    background: $blue;
+                    border-radius: 50%;
+                    transform: scaleY(0);
+                    transition: all 0.3s ease;
+                    left: 0;
+                    filter: blur(4px);
+                    opacity: 50%;
+                    z-index: -10;
+                }
+                &:hover:after {
+                    transform: scaleY(1);
+                }
+            }
+            &:hover ul {
+                position: absolute;
+                display:block;
+            }
+            ul {
+                position: relative;
+                display: none;
+                li {
+                    display: block;
+                    width: 100%;
+                    padding: 30px 0;
+                }
+            }
+
+        }
+        
+    }
+    
+}
+#active:checked ~ .wrapper {
+    clip-path: circle(75%);
+    background: linear-gradient(130deg, $salmon 0 50%, $blue);
+    z-index: 50;
+}
+.menu-btn {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    color: $salmon;
+    height: 100px;
+    font-size: $h2-l;
+    z-index: 20;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#active:checked ~ .menu-btn {
+    color: $white;
+    z-index: 55;
+}
+#active:checked ~ .menu-btn i:before {
+    content: "X";
+}
+#active:checked ~ .menu-btn {
+    color: $white;
+}
+.header {
+    height: 80vh;
+    background-image: url(../../assets/img/header__BG.jpg);
+    background-size: cover;
+    padding-top: 1rem;
+    input {
+        display: none;
+    }
+}

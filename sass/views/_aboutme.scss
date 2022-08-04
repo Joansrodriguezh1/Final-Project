@@ -1,0 +1,89 @@
+.Banner__aboutme {
+    display: grid;
+    grid-template-areas: 
+    " 4star Designer . "
+    " . Designer 7star "
+    ;
+    grid-template-columns: 20% 60% auto;
+    grid-template-rows: 65% 35%;
+    height: 60vh;   
+        &__4star {
+            color: $white;
+            padding: 15vh 0 0 5vw;
+            @include Banner__AboutMe (4star,10,left,start)
+        }
+        &__text {
+            color: $white;
+            padding: 0 0 5vh 0;
+            @include Banner__AboutMe (Designer,20,center,end)
+        }
+        &__img {
+            height: 50vh;
+            @include Banner__AboutMe (Designer,10,center,end)
+        }
+        &__7star {
+            margin: 70vh 0 0 0;
+            @include Banner__AboutMe (7star,10,left,end)
+        }
+    }
+.Aboutme__skills {
+    display: grid;
+    grid-template-areas: 
+    " title strokeStar"
+    " content content";
+    grid-template-rows: auto auto;
+    grid-template-columns: 60% auto;
+    &__title {
+    grid-area: title;
+    color: $gray;
+    justify-self: right;
+    margin: 8px 0 0 0 ;
+    padding: 200px 40px 150px 0;
+    }
+    &__strokeStar {
+    grid-area: strokeStar;
+    justify-self: left;
+    padding: 200px 0 0 0;
+    color: $gray;
+    }
+    }
+        .Aboutme__skills__content {
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+        width: auto;
+        grid-area: content;
+        justify-content: space-around;
+        }
+            .Aboutme__skills__content--grid {
+            display: grid;
+            grid-template-areas: 
+            "Indicador"
+            "title"
+            "text";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto;
+            width: 500px;
+            margin: 50px 0 70px 0;
+            }
+                .Aboutme__skills__content--grid--indicador {
+                grid-area: Indicador;
+                justify-self: center;
+                }
+                .Aboutme__skills__content--grid--title {
+                grid-area: title;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $gray;
+                text-align: center;
+                justify-self: center;
+                margin: 10px 0 0 0 ;
+                }
+                .Aboutme__skills__content--grid--text {
+                grid-area: text;
+                color: $gray;
+                width: 250px;
+                text-align:justify;
+                justify-self: center;
+                margin: 10px 0 0 0 ;
+                }

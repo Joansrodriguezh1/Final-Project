@@ -1,0 +1,23 @@
+/* ---------------Home------------- */
+
+@mixin WhatIdo_text ($color, $Zindex, $LineHeight) {
+    color: $color;
+    z-index: $Zindex;
+    line-height: $LineHeight;
+}
+
+@mixin Panel ($GridArea,$Color,$AlignSelf,$JustifySelf) {
+    grid-area: $GridArea;
+    color: $Color;
+    align-self: $AlignSelf;
+    justify-self: $JustifySelf;
+}
+
+/* ----------------AboutMe------------- */
+
+@mixin Banner__AboutMe ($GridArea, $ZIndex, $JustifySelf, $AlignSelf) {
+    grid-area: $GridArea;
+    z-index: $ZIndex;
+    justify-self: $JustifySelf;
+    align-self: $AlignSelf;
+}
