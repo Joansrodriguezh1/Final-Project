@@ -1,3 +1,6 @@
+/* -----------Banner----------- */
+
+
 .Banner {
     height: 70vh;
     display: grid;
@@ -45,7 +48,7 @@
     } 
     }
 
-/* What I do */
+/* -----------What I do----------- */
 
     .WhatIdo {
         padding: 5vh 15vh 10vh 15vh;
@@ -167,7 +170,7 @@
                     }
         }
 
-/* Services */
+/* -----------Services----------- */
 
     .services {
         display: flex;
@@ -256,7 +259,7 @@
             }
         }  
 
-/* How I do it */
+/* -----------How I do it----------- */
 
     .HowIdoit {
         display: grid;
@@ -466,6 +469,75 @@
             }
         }
 
-        
+
+
+/* -----------Responsive------------ */
+
+@media (min-width: 320px) and (max-width: 640px) {
+    
+    .Banner {
+        height: auto;
+        &--Star {
+            display: none;
+        }
+
+        &--H2 {
+            width: auto;
+            line-height: 2rem;
+        }
+
+        &--H1 {
+            width: auto;
+            line-height: 3rem;
+        }
+    }
+    .WhatIdo {
+        display: grid;
+        grid-template-areas: 
+        " WhatIdo "
+        " DESIGN"
+        " Parrafo"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 15vh 0 15vh 0;
+        height: auto;
+            &__BG {
+            display: none;
+            }
+            &__skills {
+            display: none;
+            }
+            &__H3 {
+                text-align: center;
+                line-height: 1rem;
+            }
+            &__H1 {
+                text-align: center;
+                line-height: 3rem;
+            }
+            &__p {
+            text-align: center;
+            }
+        }   
+    .services {
+        height: auto;
+    }
+    .HowIdoit {
+        display: grid;
+        height: 140vh;
+        grid-template-areas: 
+        "title title"
+        "title1 text1"
+        "title2 text2"
+        "title3 text3"
+        "title4 text4";
+        grid-template-columns: 100px auto;
+        grid-template-rows: auto auto auto auto auto;
+            &__title {
+                justify-self: center;
+                }
+        }
+        }
         
         

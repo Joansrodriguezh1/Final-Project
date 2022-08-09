@@ -34,6 +34,24 @@ p {
   font-size: 1rem;
   font-family: "Roboto", sans-serif; }
 
+/* -----------Responsive------------ */
+@media (min-width: 320px) and (max-width: 640px) {
+  h1 {
+    font-family: "Oi", cursive;
+    font-size: 3rem;
+    font-weight: 100; }
+  h2 {
+    font-family: "Oi", cursive;
+    font-size: 2rem;
+    font-weight: 100; }
+  h3 {
+    font-family: "Oi", cursive;
+    font-size: 1rem;
+    font-weight: 100; }
+  p {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif; } }
+
 .wrapper {
   position: fixed;
   top: 0;
@@ -125,6 +143,18 @@ p {
   .header input {
     display: none; }
 
+/* -----------Responsive----------- */
+@media (min-width: 320px) and (max-width: 640px) {
+  .wrapper ul li {
+    margin: -10px 0; }
+    .wrapper ul li a {
+      font-size: 2rem;
+      font-weight: 300; }
+      .wrapper ul li a:after {
+        width: 2rem;
+        height: 2rem; } }
+
+/* -----------Banner----------- */
 .Banner {
   height: 70vh;
   display: grid;
@@ -164,7 +194,7 @@ p {
     justify-self: left;
     align-self: baseline; }
 
-/* What I do */
+/* -----------What I do----------- */
 .WhatIdo {
   padding: 5vh 15vh 10vh 15vh;
   display: grid;
@@ -265,7 +295,7 @@ p {
     background: #df8b9b;
     background: linear-gradient(190deg, #df8b9b 0%, #a1eef8 100%); } }
 
-/* Services */
+/* -----------Services----------- */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -376,7 +406,7 @@ p {
     align-self: end;
     justify-self: flex-start; }
 
-/* How I do it */
+/* -----------How I do it----------- */
 .HowIdoit {
   display: grid;
   height: 70vh;
@@ -590,6 +620,48 @@ p {
     background: #df8b9b;
     background: linear-gradient(190deg, #df8b9b 0%, #a1eef8 100%); } }
 
+/* -----------Responsive------------ */
+@media (min-width: 320px) and (max-width: 640px) {
+  .Banner {
+    height: auto; }
+    .Banner--Star {
+      display: none; }
+    .Banner--H2 {
+      width: auto;
+      line-height: 2rem; }
+    .Banner--H1 {
+      width: auto;
+      line-height: 3rem; }
+  .WhatIdo {
+    display: grid;
+    grid-template-areas: " WhatIdo " " DESIGN" " Parrafo";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 15vh 0 15vh 0;
+    height: auto; }
+    .WhatIdo__BG {
+      display: none; }
+    .WhatIdo__skills {
+      display: none; }
+    .WhatIdo__H3 {
+      text-align: center;
+      line-height: 1rem; }
+    .WhatIdo__H1 {
+      text-align: center;
+      line-height: 3rem; }
+    .WhatIdo__p {
+      text-align: center; }
+  .services {
+    height: auto; }
+  .HowIdoit {
+    display: grid;
+    height: 140vh;
+    grid-template-areas: "title title" "title1 text1" "title2 text2" "title3 text3" "title4 text4";
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto auto auto auto; }
+    .HowIdoit__title {
+      justify-self: center; } }
+
 .Banner__aboutme {
   display: grid;
   grid-template-areas: " 4star Designer . " " . Designer 7star ";
@@ -765,3 +837,224 @@ p {
 
 .btn__redes__Facebook {
   background: #DF8B9B; }
+
+/* ----------------Banner---------------- */
+.Portfolio__Banner {
+  display: grid;
+  grid-template-areas: " . Star Title";
+  grid-template-columns: auto auto 65%;
+  margin: 20vh 0 30vh 0;
+  height: auto; }
+
+.Portfolio__Header__Star {
+  grid-area: Star;
+  align-self: center;
+  justify-self: end;
+  padding: 0 50px 0 0; }
+
+.Portfolio__Header__img {
+  padding: 0 20% 0 0;
+  grid-area: Title;
+  justify-self: end;
+  z-index: 10; }
+
+.Portfolio__Header__text {
+  text-align: left;
+  grid-area: Title;
+  font-size: 6rem;
+  color: white;
+  line-height: 6rem;
+  z-index: 20;
+  font-family: 'Oi', cursive;
+  align-self: center; }
+
+/* ----------------Ui Design---------------- */
+.Portfolio__Panel {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  justify-content: space-around; }
+
+.panel_portfolio1 {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: #6ba5f7;
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+  background: linear-gradient(90deg, #6ba5f7 0%, #a1eef8 100%); }
+  .panel_portfolio1__top {
+    padding: 0 250px 0 0;
+    text-align: center;
+    grid-area: top;
+    color: #666666;
+    align-self: center;
+    justify-self: left; }
+  .panel_portfolio1__mid {
+    width: 250px;
+    text-align: justify;
+    padding: 0 0 50px;
+    grid-area: mid;
+    color: #666666;
+    align-self: flex-end;
+    justify-self: center; }
+  .panel_portfolio1__bot {
+    padding: 0 30px 50px;
+    grid-area: bot;
+    color: none;
+    align-self: flex-end;
+    justify-self: right; }
+
+.panel_portfolio2 {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: #6ba5f7;
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+  background: linear-gradient(40deg, #df8b9b 0%, #a1eef8 100%); }
+  .panel_portfolio2__top {
+    grid-area: top;
+    color: #ffffff;
+    align-self: center;
+    justify-self: center; }
+  .panel_portfolio2__mid {
+    line-height: 2rem;
+    text-align: center;
+    padding: 0 250px 0 0;
+    grid-area: mid;
+    color: #666666;
+    align-self: center;
+    justify-self: flex-start; }
+  .panel_portfolio2__bot {
+    text-align: justify;
+    width: 250px;
+    grid-area: bot;
+    color: #666666;
+    align-self: center;
+    justify-self: center; }
+
+.panel_portfolio3 {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: #6ba5f7;
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+  background: linear-gradient(280deg, #eddabc 0%, #e07c96 100%); }
+  .panel_portfolio3__top {
+    padding: 0 55px 0 80px;
+    grid-area: top;
+    color: #666666;
+    align-self: center;
+    justify-self: start; }
+  .panel_portfolio3__mid {
+    grid-area: mid;
+    color: #666666;
+    align-self: center;
+    justify-self: center; }
+  .panel_portfolio3__bot {
+    line-height: 2rem;
+    padding: 20% 230px 15% 0;
+    text-align: center;
+    grid-area: bot;
+    color: #666666;
+    align-self: end;
+    justify-self: flex-start; }
+
+/* ----------------Banner 2 - Social Media---------------- */
+.Portfolio__SocialMedia__BG {
+  display: grid;
+  grid-template-areas: "Title Star";
+  grid-template-columns: 70% 30%;
+  background-image: url(../../assets/img/intermediate__BG.png);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  margin: 15vh 0 0 0; }
+
+.Portfolio__SocialMedia__Star4 {
+  grid-area: Title;
+  z-index: 10;
+  align-self: flex-start;
+  justify-self: left;
+  padding: 8% 0 0 8%; }
+
+.Portfolio__SocialMedia__img {
+  grid-area: Title;
+  z-index: 20;
+  padding: 0 0 0 15%;
+  align-self: center;
+  justify-self: left; }
+
+.Portfolio__SocialMedia__text {
+  grid-area: Title;
+  z-index: 30;
+  text-align: left;
+  align-self: center;
+  color: white;
+  line-height: 6rem;
+  padding: 0 0 0 35%; }
+
+.Portfolio__SocialMedia__text2 {
+  color: white;
+  line-height: 4rem; }
+
+.Portfolio__SocialMedia__Star7 {
+  grid-area: Star;
+  align-self: center;
+  justify-self: left;
+  padding: 0 4% 0 0; }
+
+/* ---------------RESPONSIVE
+                  PORTFOLIO-----------------*/
+@media (min-width: 320px) and (max-width: 640px) {
+  .Portfolio__Panel {
+    height: auto; } }
+
+.Contact__Form {
+  width: 300px;
+  height: auto;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 3rem;
+  padding: 5vh 0 10vh 0;
+  margin: 20vh auto 0 auto; }
+  .Contact__Form input {
+    display: inline; }
+  .Contact__Form__Titles {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #666666;
+    font-size: 1.5rem;
+    line-height: 3rem; }
+  .Contact__Form__fillers {
+    width: 80%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 0.08rem; }
+  .Contact__Form__buttom {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #666666;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 30px 0 0 0;
+    width: 40%;
+    border-radius: 1.5rem; }

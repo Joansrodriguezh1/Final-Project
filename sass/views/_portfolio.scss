@@ -1,0 +1,184 @@
+/* ----------------Banner---------------- */
+
+.Portfolio__Banner {
+    display: grid;
+    grid-template-areas:
+    " . Star Title"
+    ;
+    grid-template-columns: auto auto 65%;
+    margin: 20vh 0 30vh 0;
+    height: auto;
+}
+    .Portfolio__Header {
+        &__Star {
+            grid-area: Star;
+            align-self: center;
+            justify-self: end;
+            padding: 0 50px 0 0;
+        }
+        &__img {
+            padding: 0 20% 0 0;
+            grid-area: Title;
+            justify-self: end;
+            z-index: 10;
+        }
+        &__text {
+            text-align: left;
+            grid-area: Title;
+            font-size: 6rem;
+            color: white;
+            line-height: 6rem;
+            z-index: 20;
+            font-family: 'Oi', cursive;
+            align-self: center;
+        }
+    }
+
+    /* ----------------Ui Design---------------- */
+
+
+    .Portfolio__Panel {
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        justify-content: space-around;}
+   
+
+        @for $number from 1 through 3 {
+            .panel_portfolio#{$number} {
+                display: grid;
+                grid-template-areas: 
+                "top"
+                "mid"
+                "bot"
+                ;
+                grid-template-rows: 30% 40% 30%;
+                z-index: 15;
+                width: 300px;
+                height: 620px;
+                border-radius: 60px;
+                margin: 70px 50px 0 50px;
+                justify-content: center;
+                background: rgb(107,165,247);
+                box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+                @if $number == 1 {
+                    background: linear-gradient(90deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+                    &__top {
+                        padding: 0 250px 0 0;
+                        text-align: center;
+                        @include Panel (top,$gray,center,left)
+                    }
+                    
+                    &__mid {
+                        width: 250px;
+                        text-align: justify;
+                        padding: 0 0 50px;
+                        @include Panel (mid,$gray,flex-end,center)
+                    }
+        
+                    &__bot {
+                        padding: 0 30px 50px;
+                        @include Panel (bot,none,flex-end,right)
+                    }
+                }
+                @if $number == 2 {
+                    background: linear-gradient(40deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+                    &__top {
+                        @include Panel (top,$white,center,center)
+                    }
+                    
+                    &__mid {
+                        line-height: 2rem;
+                        text-align: center;
+                        padding: 0 250px 0 0;
+                        @include Panel (mid,$gray,center,flex-start);
+                    }
+        
+                    &__bot {
+                        text-align: justify;
+                        width: 250px;
+                        @include Panel (bot,$gray,center,center)
+                    }
+                }
+                @if $number == 3 {
+                    background: linear-gradient(280deg, rgba(237,218,188,1) 0%, rgba(224,124,150,1) 100%);
+                    &__top {
+                        padding: 0 55px 0 80px;
+                        @include Panel (top,$gray,center,start)
+                    }
+        
+                    &__mid {
+                        @include Panel (mid,$gray,center,center)
+                    }
+        
+                    &__bot {
+                        line-height: 2rem;
+                        padding: 20% 230px 15% 0;
+                        text-align: center;
+                        @include Panel (bot,$gray,end,flex-start)
+                    }
+                }
+                
+            }
+        }  
+
+    /* ----------------Banner 2 - Social Media---------------- */
+
+    .Portfolio__SocialMedia { 
+        &__BG {
+        display: grid;
+        grid-template-areas:
+        "Title Star"
+        ;
+        grid-template-columns: 70% 30%;
+        background-image: url(../../assets/img/intermediate__BG.png);
+        background-position: center;
+        background-size: cover;
+        height: 80vh;
+        margin: 15vh 0 0 0;
+        }
+        &__Star4 {
+            grid-area: Title;
+            z-index: 10;
+            align-self:flex-start;
+            justify-self: left;
+            padding: 8% 0 0 8%;
+        }
+        &__img {
+            grid-area: Title;
+            z-index: 20;
+            padding: 0 0 0 15%;
+            align-self: center;
+            justify-self: left;
+        }
+        &__text {
+            grid-area: Title;
+            z-index: 30;
+            text-align: left;
+            align-self: center;
+            color: white;
+            line-height: 6rem;
+            padding: 0 0 0 35%;
+        }
+        &__text2 {
+            color: white;
+            line-height: 4rem;
+        }
+        &__Star7 {
+            grid-area: Star;
+            align-self: center;
+            justify-self: left;
+            padding: 0 4% 0 0;
+        }
+    }
+
+/* ---------------RESPONSIVE
+                  PORTFOLIO-----------------*/
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+    .Portfolio__Panel {
+        height: auto;
+    }
+}
+

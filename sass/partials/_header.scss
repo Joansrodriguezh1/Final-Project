@@ -103,3 +103,29 @@
         display: none;
     }
 }
+
+
+/* -----------Responsive----------- */
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .wrapper {
+          
+        ul {
+            li {
+
+                margin: -10px 0;
+                a {
+                    font-size: 2rem;
+                    font-weight: 300;
+                    &:after {
+                        width: 2rem;
+                        height: 2rem;   
+                    }           
+            
+                }
+        
+            }
+        }
+    }
+}
+
